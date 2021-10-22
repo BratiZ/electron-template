@@ -1,0 +1,92 @@
+{
+  "name": "electron-template",
+  "version": "3.0.0",
+  "description": "Template for Electron with React, TypeScript, Webpack, Sass and implemented basic structure.",
+  "main": "./dist/main.bundle.js",
+  "scripts": {
+    "start": "yarn main && electron .",
+    "main": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack  --config=webpack-main.config.ts",
+    "view-dev-server": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" NODE_ENV=development webpack serve --config=webpack-view.config.ts",
+    "test": "mocha -r ts-node/register -r tsconfig-paths/register \"test/**/*.ts\""
+  },
+  "build": {
+    "appId": "com.przestep.electron.template",
+    "productName": "Electron template",
+    "directories": {
+      "app": "./dist/",
+      "output": "./out/"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "buildVersion": "1"
+  },
+  "author": "Przemysław Stępniak",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "sass": "^1.43.2",
+    "sass-loader": "^12.2.0"
+  },
+  "devDependencies": {
+    "@types/copy-webpack-plugin": "^8.0.1",
+    "@types/html-webpack-plugin": "^3.2.6",
+    "@types/lodash": "^4.14.176",
+    "@types/mocha": "^8.2.0",
+    "@types/node": "^16.11.4",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router": "^5.1.8",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/webpack": "~5.28.0",
+    "@typescript-eslint/eslint-plugin": "^4.11.0",
+    "@typescript-eslint/parser": "^4.11.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "copyfiles": "^2.4.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.0.1",
+    "electron": "^15.3.0",
+    "electron-builder": "^22.13.1",
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-webpack": "^0.13.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.4.0",
+    "lodash": "^4.17.20",
+    "mocha": "^8.2.1",
+    "rimraf": "^3.0.2",
+    "source-map-loader": "^2.0.0",
+    "spectron": "^13.0.0",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.12",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.4.4",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BratiZ/electron-template/issues"
+  },
+  "keywords": [
+    "boilerplate",
+    "Electron",
+    "React",
+    "Typescript",
+    "Webpack"
+  ],
+  "bugs": {
+    "url": "https://github.com/BratiZ/electron-template/issues"
+  },
+  "homepage": "https://github.com/BratiZ/electron-template#readme"
+}

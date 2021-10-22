@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "_/*": ["src/*"],
+      "_public/*": ["public/*"],
+      "_main/*": ["src/main/*"],
+      "_models/*": ["src/models/*"],
+      "_renderer/*": ["src/renderer/*"],
+      "_utils/*": ["src/utils/*"]
+    },
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "module": "CommonJS",
+    "target": "ES5",
+    "lib": ["ES2020", "DOM"]
+  },
+  "exclude": ["node_modules"]
+}
