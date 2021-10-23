@@ -4,6 +4,9 @@ import * as ReactDOM from 'react-dom';
 import { App } from '_/view/app';
 import './renderer.sass';
 import { ipcRenderer } from "electron";
+import { Provider } from 'react-redux';
+import store from '_/view/store';
+import Counter from '_/view/counter/counter';
 
 const MainView = (): ReactElement => {
     ipcRenderer
@@ -12,11 +15,14 @@ const MainView = (): ReactElement => {
         .catch(console.error);
 
     return (
-        <div className="app">
-            <p>Hello</p>
-            some random text
-            <App/>
-        </div>
+        <Provider store={store}>
+            <div className="app">
+                <p>Hello</p>
+                some random text
+                <App/>
+                <Counter/>
+            </div>
+        </Provider>
     );
 }
 
